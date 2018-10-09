@@ -1,0 +1,67 @@
+# old browser or os
+SetEnvIf User-Agent ";MSIE9.0;" ng_useragent
+SetEnvIf User-Agent "Firefox/28.0" ng_useragent
+SetEnvIf User-Agent "Firefox/3.6" ng_useragent
+SetEnvIf User-Agent "Firefox/40.1" ng_useragent
+SetEnvIf User-Agent "Firefox/48.0" ng_useragent
+SetEnvIf User-Agent "Mac OS X 10_[1-9]_" ng_useragent
+SetEnvIf User-Agent "Mozilla/5.0$" ng_useragent
+SetEnvIf User-Agent "MSIE 10.6" ng_useragent
+SetEnvIf User-Agent "MSIE 11," ng_useragent
+SetEnvIf User-Agent "MSIE 2.0" ng_useragent
+SetEnvIf User-Agent "MSIE 3.0" ng_useragent
+SetEnvIf User-Agent "MSIE 4.0" ng_useragent
+SetEnvIf User-Agent "MSIE 5.0" ng_useragent
+SetEnvIf User-Agent "MSIE 5.5" ng_useragent
+SetEnvIf User-Agent "MSIE 6.0" ng_useragent
+SetEnvIf User-Agent "MSIE 6.1" ng_useragent
+SetEnvIf User-Agent "MSIE 7.0" ng_useragent
+SetEnvIf User-Agent "MSIE 8.0" ng_useragent
+SetEnvIf User-Agent "MSIE 999" ng_useragent
+SetEnvIf User-Agent "MSIE8.0" ng_useragent
+SetEnvIf User-Agent "Opera/9.27" ng_useragent
+SetEnvIf User-Agent "Windows 95" ng_useragent
+SetEnvIf User-Agent "Windows 98" ng_useragent
+
+
+# attack tool or bot
+SetEnvIf User-Agent "/bin/bash" ng_useragent
+SetEnvIf User-Agent "/bin/uname" ng_useragent
+SetEnvIf User-Agent "/dev/tcp" ng_useragent
+SetEnvIf User-Agent "/dev/udp" ng_useragent
+SetEnvIf User-Agent "^$" ng_useragent
+SetEnvIf User-Agent "0xSCANNER" ng_useragent
+SetEnvIf User-Agent "20010801" ng_useragent
+SetEnvIf User-Agent "AhrefsBot" ng_useragent
+SetEnvIf User-Agent "aiohttp" ng_useragent
+SetEnvIf User-Agent "Alprazolam" ng_useragent
+SetEnvIf User-Agent "Baiduspider" ng_useragent
+SetEnvIf User-Agent "BLEXBot" ng_useragent
+SetEnvIf User-Agent "BOT for JCE" ng_useragent
+SetEnvIf User-Agent "Gecko/20100115" ng_useragent
+SetEnvIf User-Agent "Gemini" ng_useragent
+SetEnvIf User-Agent "Hakai" ng_useragent
+SetEnvIf User-Agent "Hello" ng_useragent
+SetEnvIf User-Agent "Indy Library" ng_useragent
+SetEnvIf User-Agent "JDatabaseDriverMysqli" ng_useragent
+SetEnvIf User-Agent "Jorgee" ng_useragent
+SetEnvIf User-Agent "LMAO" ng_useragent
+SetEnvIf User-Agent "Mappy" ng_useragent
+SetEnvIf User-Agent "masscan" ng_useragent
+SetEnvIf User-Agent "MJ12bot" ng_useragent
+SetEnvIf User-Agent "Morfeus" ng_useragent
+SetEnvIf User-Agent "Nessus" ng_useragent
+SetEnvIf User-Agent "Nikto" ng_useragent
+SetEnvIf User-Agent "OpenVAS" ng_useragent
+SetEnvIf User-Agent "Ronin" ng_useragent
+SetEnvIf User-Agent "SemrushBot" ng_useragent
+SetEnvIf User-Agent "Shinka" ng_useragent
+SetEnvIf User-Agent "sqlmap" ng_useragent
+SetEnvIf User-Agent "WPScan" ng_useragent
+SetEnvIf User-Agent "yandex" ng_useragent
+SetEnvIf User-Agent "ZmEu" ng_useragent
+SetEnvIf User-Agent "union select" ng_useragent
+
+
+order deny,allow
+deny from env=ng_useragent
