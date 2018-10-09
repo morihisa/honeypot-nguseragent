@@ -5,6 +5,8 @@
 Apache の .htaccess ファイルに ng_useragent.txt の内容を追記するだけです。該当の User-Agent が含まれる通信は、アクセスが拒否されます。
 
 # 検証
+次のコマンドを実行して、403 Forbidden の応答が得られた場合、正しく設定されています。
+
 $ wget --user-agent=Hello http://設定したサイトのURL/
 
 ***
